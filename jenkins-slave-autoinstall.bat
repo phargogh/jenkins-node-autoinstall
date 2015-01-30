@@ -18,7 +18,7 @@ del $TORTOISE_MSI
 
 # clone the natcap/docker-jenkins repo
 # This should ask for an authorized username and password
-$USERNAME = "[Environment]::UserName"
+$USERNAME = [Environment]::UserName
 $REPO_PATH="C:\Users\$USERNAME\docker-jenkins"
 & "C:\Program Files\TortoiseHg\hg.exe" clone https://bitbucket.org/natcap/docker-jenkins $REPO_PATH
 
