@@ -20,7 +20,7 @@ del $TORTOISE_MSI
 # This should ask for an authorized username and password
 $USERNAME = "[Environment]::UserName"
 $REPO_PATH="C:\Users\$USERNAME\docker-jenkins"
-"C:\Program Files\TortoiseHg\hg.exe" clone https://bitbucket.org/natcap/docker-jenkins $REPO_PATH
+"C:\Program Files\TortoiseHg\hg.exe" "clone https://bitbucket.org/natcap/docker-jenkins $REPO_PATH"
 
 # Finish the installation of the jenkins slave from here.
 cd $REPO_PATH\windows-slave
