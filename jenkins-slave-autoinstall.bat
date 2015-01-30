@@ -9,7 +9,7 @@
 # Download TortoiseHG
 $TORTOISE_MSI="tortoisehg-3.2.4-x86.msi"
 #bitsadmin /transfer TortoiseHg /download /priority normal http://bitbucket.org/tortoisehg/files/downloads/$TORTOISE_MSI
-(new-object net.webclient).DownloadString("http://bitbucket.org/tortoisehg/files/downloads/$TORTOISE_MSI")
+(new-object net.webclient).DownloadFile("http://bitbucket.org/tortoisehg/files/downloads/$TORTOISE_MSI")
 
 msiexec /i $TORTOISE_MSI
 del $TORTOISE_MSI
