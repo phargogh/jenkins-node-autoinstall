@@ -9,6 +9,7 @@
 # Download TortoiseHG
 $TORTOISE_MSI="tortoisehg-3.2.4-x64.msi"
 #bitsadmin /transfer TortoiseHg /download /priority normal http://bitbucket.org/tortoisehg/files/downloads/$TORTOISE_MSI
+echo "Downloading TortoiseHG"
 (new-object net.webclient).DownloadFile("http://bitbucket.org/tortoisehg/files/downloads/$TORTOISE_MSI", $TORTOISE_MSI)
 
 # install, blocking until the program finishes.
@@ -20,7 +21,7 @@ del $TORTOISE_MSI
 $HG="C:\Program Files\TortoiseHg\hg.exe"
 $USERNAME = "[Environment]::UserName"
 $REPO_PATH="C:\Users\$USERNAME\docker-jenkins"
-hg clone https://bitbucket.org/natcap/docker-jenkins $REPO_PATH
+$HG clone https://bitbucket.org/natcap/docker-jenkins $REPO_PATH
 
 # Finish the installation of the jenkins slave from here.
 cd $REPO_PATH\windows-slave
