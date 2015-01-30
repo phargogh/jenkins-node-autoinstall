@@ -7,18 +7,18 @@
 
 
 # Download TortoiseHG
-set TORTOISE_MSI=tortoisehg-3.2.4-x86.msi
-bitsadmin /transfer TortoiseHg /download /priority normal http://bitbucket.org/tortoisehg/files/downloads/%TORTOISE_MSI%
-msiexec /i %TORTOISE_MSI%
-del %TORTOISE_MSI%
+$TORTOISE_MSI=tortoisehg-3.2.4-x86.msi
+bitsadmin /transfer TortoiseHg /download /priority normal http://bitbucket.org/tortoisehg/files/downloads/$TORTOISE_MSI
+msiexec /i $TORTOISE_MSI
+del $TORTOISE_MSI
 
 # clone the natcap/docker-jenkins repo
 # This should ask for an authorized username and password
-set HG="C:\Program Files\TortoiseHg\hg.exe"
-set REPO_PATH=C:\Users\%username%\docker-jenkins
-hg clone https://bitbucket.org/natcap/docker-jenkins %REPO_PATH%
+$HG="C:\Program Files\TortoiseHg\hg.exe"
+$REPO_PATH=C:\Users\%username%\docker-jenkins
+hg clone https://bitbucket.org/natcap/docker-jenkins $REPO_PATH
 
 # Finish the installation of the jenkins slave from here.
-cd %REPO_PATH%\windows-slave
-CALL setup-windows.bat
+cd $REPO_PATH\windows-slave
+cmd.exe "/c  setup-windows.bat"
 
