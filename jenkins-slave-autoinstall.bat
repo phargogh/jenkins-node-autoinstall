@@ -7,11 +7,12 @@
 
 
 # Download TortoiseHG
-$TORTOISE_MSI="tortoisehg-3.2.4-x86.msi"
+$TORTOISE_MSI="tortoisehg-3.2.4-x64.msi"
 #bitsadmin /transfer TortoiseHg /download /priority normal http://bitbucket.org/tortoisehg/files/downloads/$TORTOISE_MSI
 (new-object net.webclient).DownloadFile("http://bitbucket.org/tortoisehg/files/downloads/$TORTOISE_MSI", $TORTOISE_MSI)
 
-msiexec /i $TORTOISE_MSI
+# install, blocking until the program finishes.
+msiexec /i $TORTOISE_MSI | Out-Null
 del $TORTOISE_MSI
 
 # clone the natcap/docker-jenkins repo
