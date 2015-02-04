@@ -33,7 +33,7 @@ fi
 
 hg clone https://$HG_USER:$HG_PASS@bitbucket.org/natcap/docker-jenkins docker-jenkins
 pushd docker-jenkins/jenkins-slave
-./build.sh
+sudo ./build.sh
 popd
 
 LAUNCH="/home/`whoami`/jenkins-docker/jenkins-slave/launch_docker.sh"
