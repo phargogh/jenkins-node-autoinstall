@@ -11,6 +11,9 @@
 # TO INSTALL:
 #   curl -sSL https://bitbucket.org/natcap/node-autoinstall/raw/tip/jenkins-linux-slave.sh
 
+read -p "hg username:" HG_USER
+read -ps "hg password:" HG_PASS
+
 sudo apt-get update && sudo apt-get install -y \
     mercurial \
     git \
@@ -27,7 +30,8 @@ then
     sudo usermod -aG docker `whoami`
 fi
 
-hg clone http://bitbucket.org/natcap/docker-jenkins
+
+hg clone https://$HG_USER:$HG_PASS@bitbucket.org/natcap/docker-jenkins docker-jenkins
 pushd docker-jenkins/jenkins-slave
 ./build.sh
 popd
