@@ -14,7 +14,7 @@
 sudo apt-get update && sudo apt-get install -y \
     mercurial \
     git \
-    svn \
+    subversion \
     vim \
     emacs \
     wget
