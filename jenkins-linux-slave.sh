@@ -12,7 +12,7 @@
 #   curl -sSL https://bitbucket.org/natcap/node-autoinstall/raw/tip/jenkins-linux-slave.sh
 
 read -p "hg username:" HG_USER
-read -ps "hg password:" HG_PASS
+read -p "hg password:" -s HG_PASS
 
 sudo apt-get update && sudo apt-get install -y \
     mercurial \
