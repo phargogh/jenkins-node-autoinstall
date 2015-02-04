@@ -9,7 +9,7 @@
 #
 #
 # TO INSTALL:
-#   curl -sSL https://bitbucket.org/natcap/node-autoinstall/raw/tip/jenkins-linux-slave.sh
+#   bash <(curl -sSL https://bitbucket.org/natcap/node-autoinstall/raw/tip/jenkins-linux-slave.sh)
 
 read -p "hg username:" HG_USER
 read -p "hg password:" -s HG_PASS
