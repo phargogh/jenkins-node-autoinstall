@@ -20,8 +20,12 @@ sudo apt-get update && sudo apt-get install -y \
     wget
 
 # install the docker daemon and add this user to the docker group
-curl -sSL https://get.docker.com/ | sh
-sudo usermod -aG docker `whoami`
+which docker
+if [ "$?" != "0" ]
+then
+    curl -sSL https://get.docker.com/ | sh
+    sudo usermod -aG docker `whoami`
+fi
 
 hg clone https://bitbucket.org/natcap/docker-jenkins
 pushd docker-jenkins/jenkins-slave
