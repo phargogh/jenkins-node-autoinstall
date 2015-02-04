@@ -27,7 +27,7 @@ then
     sudo usermod -aG docker `whoami`
 fi
 
-hg clone https://bitbucket.org/natcap/docker-jenkins
+hg clone http://bitbucket.org/natcap/docker-jenkins
 pushd docker-jenkins/jenkins-slave
 ./build.sh
 popd
