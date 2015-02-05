@@ -35,7 +35,7 @@ pushd docker-jenkins/jenkins-slave
 sudo ./build.sh
 popd
 
-LAUNCH="/home/`whoami`/jenkins-docker/jenkins-slave/launch_docker.sh"
+LAUNCH="\/home\/`whoami`\/jenkins-docker\/jenkins-slave\/launch_docker.sh"
 sudo sed -i "s/exit 0/$LAUNCH\nexit 0/" /etc/rc.local
 
 echo Ready to make a new snapshot.
