@@ -23,8 +23,7 @@ sudo apt-get update && sudo apt-get install -y \
     wget
 
 # install the docker daemon and add this user to the docker group
-which docker
-if [ "$?" != "0" ]
+if [ ! -e /usr/bin/docker ]
 then
     curl -sSL https://get.docker.com/ | sh
     sudo usermod -aG docker `whoami`
