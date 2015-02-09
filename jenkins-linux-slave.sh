@@ -35,6 +35,7 @@ pushd docker-jenkins/jenkins-slave
 sudo ./build.sh
 popd
 
+
 LAUNCH="\/home\/`whoami`\/docker-jenkins\/jenkins-slave\/launch_docker.sh"
 sudo sed -i "s/^exit 0/$LAUNCH\nexit 0/" /etc/rc.local
 

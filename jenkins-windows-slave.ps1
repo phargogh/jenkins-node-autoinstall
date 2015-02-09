@@ -2,8 +2,7 @@
 # Requires authorized access to bitbucket.org/natcap/docker-jenkins
 
 # To download this script from admin CMD, run:
-#     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://bitbucket.org/natcap/node-autoinstall/raw/tip/jenkins-slave-autoinstall.bat'))"
-#     bitsadmin.exe /transfer "Natcap-windows-autosetup" https://bitbucket.org/natcap/node-autoinstall/raw/tip/jenkins-slave-autoinstall.bat jenkins-slave-autoinstall.bat
+#     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://bitbucket.org/natcap/node-autoinstall/raw/tip/jenkins-windows-slave.ps1'))"
 
 
 # Download TortoiseHG
